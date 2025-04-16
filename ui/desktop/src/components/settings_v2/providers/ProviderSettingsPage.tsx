@@ -99,7 +99,9 @@ export default function ProviderSettings({ onClose, isOnboarding }: ProviderSett
           {/* Only show back button if not in onboarding mode */}
           {!isOnboarding && <BackButton onClick={onClose} />}
           <h1 className="text-3xl font-medium text-textStandard mt-1">
-            {isOnboarding ? 'Configure your providers' : 'Provider Configuration Settings'}
+            {isOnboarding
+              ? 'Configure your providers'
+              : 'Provider Configuration Settings for Chase'}
           </h1>
           {isOnboarding && (
             <p className="text-s text-textSubtle max-w-2xl pt-2">

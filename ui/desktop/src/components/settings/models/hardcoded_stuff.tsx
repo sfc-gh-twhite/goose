@@ -47,6 +47,7 @@ export const default_models = {
   azure_openai: 'gpt-4o',
   gcp_vertex_ai: 'gemini-2.0-flash-001',
   aws_bedrock: 'us.anthropic.claude-3-7-sonnet-20250219-v1:0',
+  snowflake: 'snowflake-llama-3.3-70b',
 };
 
 export function getDefaultModel(key: string): string | undefined {
@@ -63,6 +64,7 @@ export const required_keys = {
   Ollama: ['OLLAMA_HOST'],
   Google: ['GOOGLE_API_KEY'],
   OpenRouter: ['OPENROUTER_API_KEY'],
+  Snowflake: ['SNOWFLAKE_HOST'],
   'Azure OpenAI': [
     'AZURE_OPENAI_API_KEY',
     'AZURE_OPENAI_ENDPOINT',
@@ -93,6 +95,7 @@ export const supported_providers = [
   'Azure OpenAI',
   'GCP Vertex AI',
   'AWS Bedrock',
+  'Snowflake',
 ];
 
 export const model_docs_link = [
@@ -108,6 +111,10 @@ export const model_docs_link = [
   { name: 'Ollama', href: 'https://ollama.com/library' },
   { name: 'GCP Vertex AI', href: 'https://cloud.google.com/vertex-ai' },
   { name: 'AWS Bedrock', href: 'https://console.aws.amazon.com/bedrock/home#/model-catalog' },
+  {
+    name: 'Snowflake',
+    href: 'https://docs.snowflake.com/user-guide/snowflake-cortex/llm-functions#availability',
+  },
 ];
 
 export const provider_aliases = [
@@ -121,4 +128,5 @@ export const provider_aliases = [
   { provider: 'Azure OpenAI', alias: 'azure_openai' },
   { provider: 'GCP Vertex AI', alias: 'gcp_vertex_ai' },
   { provider: 'AWS Bedrock', alias: 'aws_bedrock' },
+  { provider: 'Snowflake', alias: 'snowflake' },
 ];

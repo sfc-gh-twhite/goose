@@ -14,6 +14,7 @@ pub mod oauth;
 pub mod ollama;
 pub mod openai;
 pub mod openrouter;
+pub mod snowflake;
 pub mod toolshim;
 pub mod utils;
 
